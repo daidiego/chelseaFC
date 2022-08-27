@@ -87,6 +87,7 @@
     }
     #content .player__item-number{
         font-size: 4.8rem;
+        padding-top: 15px;
     }
     #footer{
         height: 740px;
