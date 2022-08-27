@@ -89,6 +89,9 @@
         font-size: 4.8rem;
         padding-top: 15px;
     }
+    #content .women__team-image{
+        padding: 0 15px 35px;
+    }
     #footer{
         height: 740px;
     }
