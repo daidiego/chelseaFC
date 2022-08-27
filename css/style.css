@@ -1,0 +1,397 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+    --blue--color : #000E71;
+    --primary--background: linear-gradient(135deg, #5831f5 0%, #7468f1 100%);
+}
+#header {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+    font-family: chelseaBold, Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    position: fixed;
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+}
+#nav li {
+    display: inline-block;
+}
+#nav li a {
+    color: var(--blue--color);
+    text-decoration: none;
+    line-height: 50px;
+    padding: 18px 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+#nav li:nth-child(6)::after {
+    content: "";
+    border-left: 1px #000E71 solid;
+}
+#nav li:nth-child(7)::before {
+    content: "";
+    border-left: 1px #000E71 solid;
+}
+
+#nav li a:hover{
+    background-color: var(--blue--color);
+    cursor: pointer;
+    color: #fff;
+}
+
+#nav .nav__logo{
+    width: 20px;
+    height: 20px;
+    margin: 0 12px;
+}
+#header .mobile__menu-btn {
+    float: right;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    height: 50px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    width: 50px;
+
+}
+.menu-toggle__inner{
+    height: 18px;
+    margin: auto;
+    position: relative;
+    width: 20px;
+}
+#header .mobile__menu-btn span{
+    background: #001489;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform-origin: center center;
+    transition: all .3s;
+    width: 100%;
+}
+#header .mobile__menu-btn span:first-child{
+    top: 0;
+}
+#header .menu-toggle__inner span:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+}
+#header .menu-toggle__inner span:nth-child(3){
+    bottom: 0;
+}
+
+/* Slider */
+#slider{
+    background: url('../img/Diego_Costa.png') top center / cover no-repeat;
+    padding-top: 65%;
+    position: relative;
+    margin-top: 50px;
+}
+#slider .text__intro{
+    color: #d5f3fe;
+    position: absolute;
+    bottom: 38px;
+    width: 100%;
+    text-align: center;
+    font-family: chelseaBold, Arial, Helvetica, sans-serif;
+}
+#slider .text__intro-heading{
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+#slider .text__description{
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/* Content */
+
+/* Men team */
+#content .player__list{
+    display: flex;
+    gap: 2px;
+    padding: 0 45px 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#content .player__list-wrap{
+    display: flex;
+    /* background-image: var(--primary--background); */
+    background-color: #001489;
+    background: linear-gradient(45deg,#001489 50%,#0009db);
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 0 32px;
+    max-width: 300px;
+    width: 24%;
+    height: 300px;
+    cursor: pointer;
+}
+#content .women__team .women__team-title,
+#content .men__team .team__title{
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--blue--color);
+    text-transform: uppercase;
+    font-family: chelseaBasic, Arial, Helvetica, sans-serif;
+}
+@font-face{
+    font-family: chelseaBasic;
+    src: url("../font/chelsea-basic.woff");
+}
+@font-face{
+    font-family: chelseaBold;
+    src: url("../font/ChelseaBold.woff");
+}
+
+
+#content .player__item{
+    width: 100%;
+    list-style: none;
+    display: flex;
+}
+#content .player__item-number{
+    color: #ebe6df;
+    font-size: 6.5rem;
+    display: flex;
+    font-family: chelseaBasic, Arial, Helvetica, sans-serif;
+}
+#content .player__item-details{
+    bottom: 15px;
+    left: 32px;
+    position: absolute;
+    z-index: 9;
+    color: #fff;
+}
+#content .player__first-name{
+    font-size: 0.7rem;
+    line-height: 1.1875;
+}
+#content .player__last-name {
+    font-size: 1.4rem;
+    line-height: 1.1875;
+    font-family: chelseaBold, Arial, Helvetica, sans-serif;
+}
+#content .player__item-position{
+    font-size: 0.7rem;
+    line-height: 1.1875;
+    padding-top: 20px;
+}
+#content .player__item-image{
+    position: absolute;
+    z-index: 8;
+    /* width: 100%;
+    height: 100%; */
+    left: 100px;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+#content .player__item-image--frame{
+    position: absolute;
+    /* max-height: 445px; */
+    bottom: 0;
+    max-height: 300px;
+}
+
+#content .player__list-wrap:hover{
+    background-image: none;
+    background-color: #fff;
+    transition: all 0.6s ease;
+}
+#content .player__list-wrap:hover .player__item-details{
+    color: #000E71;
+}
+/* Women's Team */
+#content .women__team{
+    background-color: #ebe6df;
+} 
+#content .women__team-image{
+    padding: 0 35px 35px;
+    
+}
+#content .women__team-image-s{
+    background-size: cover ;
+    width: 100%;
+    border-radius: 5px;
+}
+#content .women__team-list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#content .women__team-info {
+    padding: 0 20px 35px;
+    list-style: none;
+}
+#content .women__team-info span {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 5px;
+    font-size: 1.2rem;
+    font-family: ChelseaBasic,Arial, Helvetica, sans-serif;
+    background-color: #d473d4;
+    color: #fff;
+    border-radius: 4px;
+    line-height: 2rem;
+}
+#content .women__team-info li{
+    display: flex;
+    justify-content: center;
+    font-family: ChelseaBasic, Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    color: #000;
+}
+
+
+
+#footer {
+    background-color: #001489;
+    background: linear-gradient(45deg,#001489 50%,#0009db);
+    height: 500px;
+    width: 100%;
+}
+#footer .hover__footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer .slick__track {
+    display: block;
+    justify-content: center;
+    width: 267px;
+    height: 350px;
+    margin: 0 22px;
+}
+#footer .chelsea__card{
+    background-color: #fff;
+    height: 350px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+    cursor: pointer;
+}
+#footer .chelsea__card-title {
+    color: #001489;
+    font-family: ChelseaBasic,sans-serif;
+    font-size: 40px;
+    font-size: 2.5rem;
+    left: 5px;
+    line-height: 1;
+    margin: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 22px;
+    transition: all .3s ease;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
+    z-index: 10;
+}
+#footer .chelsea__card-image{
+    height: auto;
+    inset: 30px;
+    pointer-events: none;
+    position: absolute;
+    width: auto;
+    z-index: 20;
+}
+#footer .player__footer-card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+#footer .chelsea__card::after{
+    background-color: #fbb700;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all .3s ease-in;
+    width: 0;
+}
+#footer .chelsea__card:hover::after{
+    width: 40%;
+}
+/* donors__footer */
+
+.donors{
+    background-color: #fff;
+    height: 100px;
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.donors .donors__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    height: 63px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.responsive-image__preload-ref{
+    height: 100%;
+}
+.donors__list-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.donors__list-item a{
+    width: 100%;
+    height: 100%;
+}
+.coppyright__footer{
+    height: 36px;
+    background-color: #ebe6df;
+    padding: 8px 0;
+}
+.copyright{
+    padding: 0 40px;
+    width: 100%;
+    text-align: center;
+    max-height: 20px;
+}
+.copyright h1{
+    font-size: 1rem;
+    color: #000;
+    max-height: 20px;
+    align-items: center;
+    font-family: ChelseaBasic,Arial, Helvetica, sans-serif;
+}

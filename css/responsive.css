@@ -1,0 +1,140 @@
+@media (min-width: 48.0625em ) and (max-width: 64em){
+    #content .player__list-wrap{
+        width: 33%;
+    }
+    #content .player__item-image{
+        margin-right: 20px;
+    }
+    #content .player__item-image{
+        left: 43%;
+    }
+    #content .player__item-number{
+        font-size: 5.6rem;
+    }
+}
+
+
+@media (min-width: 32.5625em) and (max-width: 48em ) {
+    #header li {
+        display: none;
+    }
+    #content .player__list-wrap{
+        width: 49%;
+    }
+    #content .player__item-image{
+        left: 43%;
+    }
+    #content .player__item-number{
+        font-size: 5rem;
+    }
+    #slider .text__intro{
+        display: none;
+    }
+    /* Header */
+    #header {
+        display: block;
+    }
+
+    #nav li a:hover{
+        background-color: #fff;
+        color: var(--blue--color);
+    }
+    #nav li {
+        display: block;
+        z-index: 999;
+    }
+    #nav{
+        display: block;
+    }
+    #nav li a {
+        z-index: 1001;
+        display: flex;
+        height: 50px;
+        align-items: center;
+    }
+    .nav__logo{
+        display: none;
+    }
+    #header .mobile__menu-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #nav li:nth-child(6)::after{
+        display: none;
+    }
+    #nav li:nth-child(7)::before{
+        display: none;
+    }
+}
+
+/* Min-mobile  <= 520px*/
+@media (max-width: 32.5em ) {
+    #slider .text__intro{
+        display: none;
+    }
+    #content .player__list-wrap{
+        width: 99%;
+    }
+    #content .player__list {
+        padding: 0 20px 35px;
+    }
+    #content .player__list-wrap{
+        max-width: 500px;
+    }
+    #content .player__item-image{
+        left: 43%;
+    }
+    #content .player__item-number{
+        font-size: 4.8rem;
+    }
+    #footer{
+        height: 740px;
+    }
+    #footer .hover__footer{
+        flex-wrap: wrap;
+    }
+    .donors__footer{
+        height: 163px;
+    }
+    .copyright h1{
+        font-size: 0.8rem;
+    }
+    /* Header navigation */
+    #header {
+        display: block;
+    }
+
+    #nav li a:hover{
+        background-color: #fff;
+        color: var(--blue--color);
+    }
+    #nav li {
+        display: block;
+        z-index: 999;
+    }
+    #nav{
+        display: block;
+    }
+    #nav li a {
+        z-index: 1001;
+        display: flex;
+        height: 50px;
+        align-items: center;
+    }
+    .nav__logo{
+        display: none;
+    }
+    #header .mobile__menu-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #nav li:nth-child(6)::after{
+        display: none;
+    }
+    #nav li:nth-child(7)::before{
+        display: none;
+    }
+
+}
